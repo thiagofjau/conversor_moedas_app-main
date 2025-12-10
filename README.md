@@ -2,7 +2,7 @@
 
 ## 📱 Sobre o Projeto
 
-Aplicativo Android de conversão de moedas desenvolvido em Java para a disciplina PDM1 (Programação para Dispositivos Móveis I) da FATEC Jahu.
+Aplicativo Android de conversão de moedas desenvolvido em Java para a disciplina de Programação para Dispositivos Móveis da FATEC Jahu.
 
 O aplicativo permite converter valores em Reais (BRL) para outras moedas internacionais utilizando taxas de câmbio em tempo real.
 
@@ -84,32 +84,6 @@ Se ainda não tiver o projeto, baixe ou clone este repositório.
 3. **Converter:** Clique no botão "CONVERTER"
 4. **Visualizar Resultado:** O valor convertido e a taxa de câmbio serão exibidos
 
-## 📁 Estrutura do Projeto
-
-```
-conversor_moedas_app-main/
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/br/edu/fatecjahu/conversormoedasapp/
-│   │   │   │   └── MainActivity.java          # Lógica principal do app
-│   │   │   ├── res/
-│   │   │   │   ├── layout/
-│   │   │   │   │   └── activity_main.xml      # Layout da interface
-│   │   │   │   ├── values/
-│   │   │   │   │   ├── strings.xml            # Strings do app
-│   │   │   │   │   ├── colors.xml             # Cores
-│   │   │   │   │   └── themes.xml             # Temas
-│   │   │   └── AndroidManifest.xml            # Manifesto do app
-│   │   ├── androidTest/                       # Testes instrumentados
-│   │   └── test/                              # Testes unitários
-│   └── build.gradle                           # Configurações do módulo
-├── gradle/
-│   └── libs.versions.toml                     # Versões das dependências
-├── build.gradle                               # Configurações do projeto
-├── settings.gradle                            # Configurações do Gradle
-└── README.md                                  # Este arquivo
-```
 
 ## 🔧 Configurações Importantes
 
@@ -135,7 +109,7 @@ dependencies {
 
 ## 🌐 API Utilizada
 
-O aplicativo utiliza a **AwesomeAPI**, uma API brasileira gratuita para cotações de moedas:
+O aplicativo utiliza a **AwesomeAPI**, uma API brasileira gratuita para cotações de moedas com grande limitação, usar com cautela:
 
 - **Endpoint:** `https://economia.awesomeapi.com.br/json/last/BRL-{MOEDA}`
 - **Documentação:** https://docs.awesomeapi.com.br/api-de-moedas
@@ -164,25 +138,7 @@ O aplicativo utiliza a **AwesomeAPI**, uma API brasileira gratuita para cotaçõ
 - Verifique sua conexão com a Internet
 - Tente: Build > Clean Project e depois Build > Rebuild Project
 
-## 👨‍🎓 Informações Acadêmicas
 
-- **Instituição:** FATEC Jahu
-- **Curso:** Análise e Desenvolvimento de Sistemas
-- **Disciplina:** PDM1 - Programação para Dispositivos Móveis I
-- **Avaliação:** A2 (Avaliação 2)
-- **Data de Entrega:** 12/12/2025 às 23:59
-- **Pontuação:** 0 a 10
-
-## 📄 Licença
-
-Este projeto foi desenvolvido para fins educacionais como parte da avaliação da disciplina PDM1.
-
-## 📞 Suporte
-
-Em caso de dúvidas sobre o projeto, consulte:
-- Os materiais fornecidos pelo professor
-- A documentação oficial do Android: https://developer.android.com
-- A documentação da AwesomeAPI: https://docs.awesomeapi.com.br
 
 ---
 
