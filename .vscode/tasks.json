@@ -1,0 +1,159 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Android: Compilar Debug",
+            "type": "shell",
+            "command": ".\\gradlew.bat",
+            "args": ["assembleDebug"],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Android: Instalar no Celular",
+            "type": "shell",
+            "command": ".\\gradlew.bat",
+            "args": ["installDebug"],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Android: Compilar + Instalar",
+            "type": "shell",
+            "command": ".\\gradlew.bat",
+            "args": ["assembleDebug", "installDebug"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Android: Compilar + Instalar + Abrir App",
+            "type": "shell",
+            "command": ".\\gradlew.bat assembleDebug installDebug; if ($?) { adb shell am start -n br.edu.fatecjahu.conversormoedasapp/.MainActivity }",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Android: Limpar Build",
+            "type": "shell",
+            "command": ".\\gradlew.bat",
+            "args": ["clean"],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Android: Limpar + Compilar + Instalar",
+            "type": "shell",
+            "command": ".\\gradlew.bat",
+            "args": ["clean", "assembleDebug", "installDebug"],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Android: Ver Logs do App",
+            "type": "shell",
+            "command": "adb",
+            "args": ["logcat", "|", "Select-String", "conversormoedasapp"],
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Android: Ver Todos os Logs",
+            "type": "shell",
+            "command": "adb",
+            "args": ["logcat"],
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Android: Limpar Logs",
+            "type": "shell",
+            "command": "adb",
+            "args": ["logcat", "-c"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Android: Verificar Dispositivos",
+            "type": "shell",
+            "command": "adb",
+            "args": ["devices"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Android: Desinstalar App",
+            "type": "shell",
+            "command": "adb",
+            "args": ["uninstall", "br.edu.fatecjahu.conversormoedasapp"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Android: Abrir App no Celular",
+            "type": "shell",
+            "command": "adb",
+            "args": ["shell", "am", "start", "-n", "br.edu.fatecjahu.conversormoedasapp/.MainActivity"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
